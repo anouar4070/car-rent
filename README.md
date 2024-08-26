@@ -7,9 +7,9 @@ This template provides a minimal setup to get React working in Vite with HMR and
   <a href="https://rent-van.netlify.app/">
  <strong> GO!</strong> 🚀
   </a>
-  <div class="markdown-heading" dir="auto"><h3 align="center" tabindex="-1" class="heading-element" dir="auto">Startup Website</h3></div>
+  <div class="markdown-heading" dir="auto"><h3 align="center" tabindex="-1" class="heading-element" dir="auto"> A React Rent Van project!</h3></div>
   <p align="center" dir="auto">
-    A React Rent Van project!
+   
     <br>
      <a href="https://github.com/anouar4070/car-rent/tree/main"><strong>Explore the docs »</strong></a>
      </p>
