@@ -41,6 +41,12 @@ function App() {
               <Route path="reviews" element={<Reviews />} />
               <Route path="vans" element={<HostVans />} />
               <Route path="vans/:id" element={<HostVanDetail />} />
+{/*  a way to make link to=".." works as expected in HostVanDetail.jsx */}
+              {/* <Route path="vans" element={<Outlet />}>
+              <Route index element={<HostVans />} />
+              <Route path=":id" element={<HostVanDetail />} />
+                  </Route> */}
+
           </Route>
 
         </Route>
