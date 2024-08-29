@@ -19,24 +19,38 @@ createServer({
         this.namespace = "api"
         this.logging = false
 
+// Description: This route returns all the vans.
+//Response: This will return an array of all van objects.
         this.get("/vans", (schema, request) => {
             return schema.vans.all()
         })
 
+//Description: This route returns a specific van by its ID.
+//Response: This will return a single object representing the van with the specified ID.
         this.get("/vans/:id", (schema, request) => {
             const id = request.params.id
             return schema.vans.find(id)
         })
 
+//Description: This route returns all vans associated with a specific host (in this case, hard-coded to hostId: "123").
+//Response: This will return an array of van objects that belong to the host with ID 123.
         this.get("/host/vans", (schema, request) => {
             // Hard-code the hostId for now
             return schema.vans.where({ hostId: "123" })
         })
 
+//Description: This route returns a specific van associated with a particular host by van ID and host ID.
+//Response: This will return a single object representing the van with the specified ID and hostId: "123".
         this.get("/host/vans/:id", (schema, request) => {
             // Hard-code the hostId for now
             const id = request.params.id
-            return schema.vans.where({ id, hostId: "123" })
+            return schema.vans.findBy({ id, hostId: "123" })
         })
     }
 })
+
+/**
+ * Summary:
+If you call a route like /api/vans or /api/host/vans, you'll get an array of van objects.
+If you call a route like /api/vans/:id or /api/host/vans/:id, you'll get a single object representing the van with that specific ID.
+ */
