@@ -10,8 +10,12 @@ import Dashboard from "./pages/Host/Dashboard";
 import Income from "./pages/Host/Income";
 import Reviews from "./pages/Host/Reviews";
 import HostLayout from "./components/HostLayout";
+import HostVans from "./pages/Host/HostVans";
+import HostVanDetail from "./pages/Host/HostVanDetail";
 
 import "../server";
+
+
 
 function App() {
   return (
@@ -25,7 +29,7 @@ function App() {
 
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetail />} />
-          {/* There is no sharing UI betwin vans & vanDetail so we don't put ekemnt with outlet in the parent route */}
+          {/* There is no sharing UI betwin vans & vanDetail so we don't put elemnt with outlet in the parent route */}
           {/* <Route path="vans">
             <Route index element={<Vans />} />
             <Route path=":id" element={<VanDetail />} />
@@ -35,6 +39,8 @@ function App() {
               <Route index element={<Dashboard />} />
               <Route path="income" element={<Income />} />
               <Route path="reviews" element={<Reviews />} />
+              <Route path="vans" element={<HostVans />} />
+              <Route path="vans/:id" element={<HostVanDetail />} />
           </Route>
 
         </Route>
