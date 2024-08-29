@@ -16,19 +16,27 @@ import "../server";
 function App() {
   return (
     <BrowserRouter>
-                    
-     <Routes>
-        <Route path="/" element={<Layout />}>   {/* <Route element={<Layout />}> */}
-          <Route index element={<Home />} />    {/* <Route path="/" element={<Home />} /> */}
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          {/* <Route element={<Layout />}> */}
+          <Route index element={<Home />} />{" "}
+          {/* <Route path="/" element={<Home />} /> */}
           <Route path="about" element={<About />} />
+
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetail />} />
-          
+          {/* There is no sharing UI betwin vans & vanDetail so we don't put ekemnt with outlet in the parent route */}
+          {/* <Route path="vans">
+            <Route index element={<Vans />} />
+            <Route path=":id" element={<VanDetail />} />
+          </Route> */}
+
           <Route path="host" element={<HostLayout />}>
-            <Route index element={<Dashboard />} />
-            <Route path="income" element={<Income />} />
-            <Route path="reviews" element={<Reviews />} />
+              <Route index element={<Dashboard />} />
+              <Route path="income" element={<Income />} />
+              <Route path="reviews" element={<Reviews />} />
           </Route>
+
         </Route>
       </Routes>
     </BrowserRouter>
