@@ -18,11 +18,14 @@ createServer({
     routes() {
         this.namespace = "api"
         this.logging = false
+        this.timing = 2000
 
 // Description: This route returns all the vans.
 //Response: This will return an array of all van objects.
         this.get("/vans", (schema, request) => {
+         // return new Response(400, {}, {error: "Error fetching data"})
             return schema.vans.all()
+
         })
 
 //Description: This route returns a specific van by its ID.
