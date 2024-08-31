@@ -1,4 +1,4 @@
-import { createServer, Model } from "miragejs"
+import { createServer, Model, Response } from "miragejs"
 
 
 createServer({
@@ -24,7 +24,7 @@ createServer({
 //Response: This will return an array of all van objects.
         this.get("/vans", (schema, request) => {
          // return new Response(400, {}, {error: "Error fetching data"})
-            return schema.vans.all()
+           return schema.vans.all()
 
         })
 
