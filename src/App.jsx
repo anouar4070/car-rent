@@ -16,8 +16,10 @@ import HostVanInfo from "./pages/Host/HostVanInfo";
 import HostVanPricing from "./pages/Host/HostVanPricing";
 import HostVanPhotos from "./pages/Host/HostVanPhotos";
 import NotFound from "./pages/NotFound";
+import Login from "./pages/Login";
 
 import "../server";
+
 
 
 
@@ -34,6 +36,11 @@ function App() {
 
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetail />} />
+          <Route
+            path="login"
+            element={<Login />}
+          />
+
           {/* There is no sharing UI betwin vans & vanDetail so we don't put elemnt with outlet in the parent route */}
           {/* <Route path="vans">
             <Route index element={<Vans />} />
