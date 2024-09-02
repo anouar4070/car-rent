@@ -22,7 +22,7 @@ export default function Login() {
         .then(data => {
             setError(null)
             localStorage.setItem("loggedin", true)
-            navigate("/host")
+            navigate("/host", { replace: true })
         })
         .catch(err => {
             setError(err)
