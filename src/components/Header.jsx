@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import imageUrl from "../assets/images/avatar-icon.png"
+import { FiLogOut } from "react-icons/fi";
 
 export default function Header() {
 
@@ -39,7 +40,9 @@ export default function Header() {
                         className="login-icon"
                     />
                 </Link>
-                <button onClick={fakeLogOut}>X</button>
+                <button onClick={fakeLogOut}>
+                <FiLogOut />
+                </button>
             </nav>
     </header>
   );

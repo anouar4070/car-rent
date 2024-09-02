@@ -52,3 +52,10 @@ export default function Reviews() {
         </section>
     )
 }
+
+/**
+ * {[...Array(review.rating)].map((_, i) => (
+
+[...Array(review.rating)] : Cette expression crée un tableau dont la longueur est égale à la note (rating) de la critique. Par exemple, si review.rating est 5, alors [...Array(5)] crée un tableau avec 5 éléments undefined.
+.map((_, i) => ...) : On mappe sur ce tableau pour générer un élément pour chaque étoile. Le premier paramètre _ n'est pas utilisé (car chaque élément est undefined), et i est l'index de l'élément, utilisé pour la key.
+ */
